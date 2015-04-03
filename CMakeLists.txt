@@ -1,0 +1,8 @@
+cmake_minimum_required(VERSION 2.8.4)
+project(testa)
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -D__STDC_CONSTANT_MACROS -std=c++11")
+set(SOURCE_FILES main.cpp)
+INCLUDE_DIRECTORIES(/Users/lpsdesk/Documents/temp/ffmpeg/include)
+LINK_DIRECTORIES(/Users/lpsdesk/Documents/temp/ffmpeg/lib)
+LINK_LIBRARIES(libavcodec.a libavdevice.a libavfilter.a libavformat.a libavutil.a libpostproc.a libswresample.a libswscale.a)
+add_executable(testa ${SOURCE_FILES})
